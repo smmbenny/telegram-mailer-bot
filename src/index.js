@@ -10,8 +10,8 @@ app.use(express.json());
 const TELEGRAM_API = `https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}`;
 
 const CHAT_IDS = [
-  -1001234567890, // замените на свои chat_id
-  -1009876543210
+  -1002519099533, // Тексты в работу
+  -1002514933227  // Задачи
 ];
 
 async function broadcastMessage(text) {
