@@ -13,12 +13,12 @@ const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
 const bot = new TelegramBot(TELEGRAM_TOKEN, { polling: true });
 
 // Ваш Telegram user_id (указали вы)
-const ADMIN_ID = 7346303154;
+const ADMIN_IDS = [7346303154, 123456789];
 
 // Каналы, в которые бот будет рассылать (указанные вами)
 const CHAT_IDS = [
-  -1002519099533, // Тексты в работу
-  -1002514933227  // Задачи
+  -1002519099533,
+  -1002514933227  
 ];
 
 // ✅ Рассылка через личное сообщение в Telegram
@@ -26,7 +26,7 @@ bot.on('message', async (msg) => {
   const fromId = msg.from.id;
   const text = msg.text;
 
-  if (fromId !== ADMIN_ID) {
+  if (!ADMIN_IDS.includes(fromId)) {
     return bot.sendMessage(fromId, '❌ У вас нет доступа.');
   }
 
