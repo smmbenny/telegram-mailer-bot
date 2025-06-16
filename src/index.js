@@ -13,7 +13,7 @@ const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
 const bot = new TelegramBot(TELEGRAM_TOKEN, { polling: true });
 
 // Ваш Telegram user_id (указали вы)
-const ADMIN_IDS = [7346303154, 123456789];
+const ADMIN_IDS = [7346303154, 8091408914, 6339304222];
 
 // Каналы, в которые бот будет рассылать (указанные вами)
 const CHAT_IDS = [
